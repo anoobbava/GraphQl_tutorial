@@ -1,6 +1,7 @@
 class CreateActorsMovies < ActiveRecord::Migration
+
   def change
-    create_table :actors_movies do |t|
-    end
+    add_column :movies, :actor_id, :integer
+    add_column :actors, :movie_id, :integer
   end
 end

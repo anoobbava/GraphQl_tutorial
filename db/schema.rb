@@ -18,9 +18,7 @@ ActiveRecord::Schema.define(version: 20170614172443) do
     t.string   "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "actors_movies", force: :cascade do |t|
+    t.integer  "movie_id"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -29,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170614172443) do
     t.integer  "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "actor_id"
   end
 
 end
